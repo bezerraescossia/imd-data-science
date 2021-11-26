@@ -63,4 +63,6 @@ Nessa altura, já estamos com todo ambiente de desenvolvimento preparado para ex
 
 Nesse primeiro momento, na análise exploratória dos dados, geramos apenas a contagem de quantas vezes certos medicamentos foram citados e como resultado temos:
 
+![alt text](https://github.com/bezerraescossia/imd-data-science/main/imagem.jpg?raw=true)
+
 Observe todo o código através do notebook [link](https://github.com/bezerraescossia/imd-data-science/blob/main/report.ipynb)
