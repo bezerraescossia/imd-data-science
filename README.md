@@ -9,7 +9,7 @@ Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Uni
 
 ## Preparação de Ambiente com querido-diario
 
-O primeiro passo do projeto foi a obtenção dos diários oficiais do município de Natal do dia 01/01/2020 (próximo ao início da pandemia) até a data atual. Mas, antes foi necessário a criação de um ambiente de desenvolvimento. Para isso, basta, primeiramente, clonar o repositório do projeto querido-diário [link](https://github.com/okfn-brasil/querido-diario), dirigir-se ao diretório pelo terminal e executar os comandos abaixo:
+O primeiro passo do projeto foi a obtenção dos diários oficiais do município de Natal do dia 01/01/2020 (próximo ao início da pandemia) até a data atual. Mas, antes foi necessário a criação de um ambiente de desenvolvimento. Para isso, basta, primeiramente, clonar o repositório do [projeto querido-diário](https://github.com/okfn-brasil/querido-diario), dirigir-se ao diretório pelo terminal e executar os comandos abaixo:
 
 ```
 $ python3 -m venv .venv
@@ -62,4 +62,4 @@ Nesse primeiro momento, na análise exploratória dos dados, geramos apenas a co
 
 ![alt text](https://github.com/bezerraescossia/imd-data-science/blob/main/imagem.jpg?raw=true)
 
-Observe todo o código através do notebook [link](https://github.com/bezerraescossia/imd-data-science/blob/main/report.ipynb)
+Observe todo o código através do [notebook](https://github.com/bezerraescossia/imd-data-science/blob/main/report.ipynb)
