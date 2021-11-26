@@ -37,9 +37,11 @@ find . -name '*.pdf' -exec mv -t ./pdfs {} +
 
 Logo após, foi criada uma pasta relativa ao trabalho do grupo, ficando com a seguinte estrutura:
 
+```
 data-science/
 ├─ querido-diario/ (repositório utilizado na obtenção dos diários oficiais)
 ├─ trabalho-grupo/
+```
 
 A pasta "pdf" foi então movida de querido-diario/data_collection/data para trabalho-grupo/data.
 
