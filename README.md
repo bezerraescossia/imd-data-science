@@ -52,3 +52,15 @@ Nesse momento, é necessário ainda a criação de um ambiente de desenvolviment
 Finalizado todos os passos até aqui, finalmente será possível trabalhar em nosso notebook e realizar as fiscalizações propostas no trabalho.
 
 ## Fiscalização dos diários oficiais
+
+Nessa altura, já estamos com todo ambiente de desenvolvimento preparado para explorar e analisar as informações dos diários oficiais. De forma resumido, foi utilizado o jupyter lab como interface para o python, seguindo os seguintes passos:
+
+- Importar as bibliotecas devidas e configura-las
+- Extrair arquivos .txt e .json (metadados) dos pdfs
+- Localizar os documentos que citam os remédios não eficazes
+- Estruturar as informações em um arquivo .csv no formato de log (data, nome do documento, remédio citado, número de páginas do documento)
+- Gerar visualizações
+
+Nesse primeiro momento, na análise exploratória dos dados, geramos apenas a contagem de quantas vezes certos medicamentos foram citados e como resultado temos:
+
+Observe todo o código através do notebook [link](https://github.com/bezerraescossia/imd-data-science/blob/main/report.ipynb)
