@@ -1,7 +1,8 @@
 # Resumo
-- Disciplina: IMD1151 - Ciência de Dados
-- Professor: Leonardo Bezerra [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/leobezerra?tab=repositories)
-- Grupo: Joseane Palhares de Aquino, Rafael Bezerra da Escóssia Araújo, Thereza Angélica Moura e Silva, Wagner Gama
+- **Disciplina**: IMD1151 - Ciência de Dados
+- **Ano**: 2021.2
+- **Professor**: Leonardo Bezerra [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/leobezerra?tab=repositories)
+- **Grupo**: Joseane Palhares de Aquino, Rafael Bezerra da Escóssia Araújo, Thereza Angélica Moura e Silva, Wagner Gama
 
 Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção de remédios não eficazes em diários oficiais do município de Natal - Rio Grande do Norte. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto querido diário [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
 
