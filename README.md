@@ -1,13 +1,13 @@
 # Resumo
 - Disciplina: IMD1151 - Ciência de Dados
-- Professor: [Leonardo Bezerra](https://github.com/leobezerra?tab=repositories)
+- Professor: Leonardo Bezerra [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/leobezerra?tab=repositories)
 - Grupo: Joseane Palhares de Aquino, Rafael Bezerra da Escóssia Araújo, Thereza Angélica Moura e Silva, Wagner Gama
 
-Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção de remédios não eficazes em diários oficiais do município de Natal - Rio Grande do Norte. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto [querido diário](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
+Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção de remédios não eficazes em diários oficiais do município de Natal - Rio Grande do Norte. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto querido diário [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
 
 # Preparação de Ambiente com querido-diario
 
-O primeiro passo do projeto foi a obtenção dos diários oficiais do município de Natal do dia 01/01/2020 (próximo ao início da pandemia) até a data de escrita desse material (26/11/2021). Mas, antes, foi necessário a criação de um ambiente de desenvolvimento. Para isso, bastou, primeiramente, clonar o repositório do [projeto querido-diário](https://github.com/okfn-brasil/querido-diario), dirigir-se ao diretório pelo terminal e executar os comandos abaixo:
+O primeiro passo do projeto foi a obtenção dos diários oficiais do município de Natal do dia 01/01/2020 (próximo ao início da pandemia) até a data de escrita desse material (26/11/2021). Mas, antes, foi necessário a criação de um ambiente de desenvolvimento. Para isso, bastou, primeiramente, clonar o repositório do projeto querido-diário [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/okfn-brasil/querido-diario), dirigir-se ao diretório pelo terminal e executar os comandos abaixo:
 
 ```
 $ python3 -m venv .venv
