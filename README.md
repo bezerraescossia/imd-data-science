@@ -61,4 +61,4 @@ Nesse primeiro momento, na análise exploratória dos dados, geramos apenas a co
 
 ![alt text](https://github.com/bezerraescossia/imd-data-science/blob/main/imagem.jpg?raw=true)
 
-Observe todo o código através do [notebook](https://github.com/bezerraescossia/imd-data-science/blob/main/report.ipynb)
+Observe todo o código através do [![Jupyter](https://img.shields.io/badge/-Notebook-191A1B?style=flat-square&logo=jupyter)](https://github.com/bezerraescossia/imd-data-science/blob/main/report.ipynb)
