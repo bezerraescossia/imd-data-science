@@ -1,13 +1,11 @@
-# IMD - Data Science
-
-## Resumo
+# Resumo
 - Disciplina: IMD1151 - Ciência de Dados
 - Professor: [Leonardo Bezerra](https://github.com/leobezerra?tab=repositories)
 - Grupo: Joseane Palhares de Aquino, Rafael Bezerra da Escóssia Araújo, Thereza Angélica Moura e Silva, Wagner Gama
 
 Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção de remédios não eficazes em diários oficiais do município de Natal - Rio Grande do Norte. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto [querido diário](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
 
-## Preparação de Ambiente com querido-diario
+# Preparação de Ambiente com querido-diario
 
 O primeiro passo do projeto foi a obtenção dos diários oficiais do município de Natal do dia 01/01/2020 (próximo ao início da pandemia) até a data atual. Mas, antes foi necessário a criação de um ambiente de desenvolvimento. Para isso, basta, primeiramente, clonar o repositório do [projeto querido-diário](https://github.com/okfn-brasil/querido-diario), dirigir-se ao diretório pelo terminal e executar os comandos abaixo:
 
@@ -42,13 +40,13 @@ data-science/
 
 A pasta "pdf" foi então movida de querido-diario/data_collection/data para trabalho-grupo/data.
 
-## Preparação de Ambiente com querido-diario-toolbox
+# Preparação de Ambiente com querido-diario-toolbox
 
 Nesse momento, é necessário ainda a criação de um ambiente de desenvolvimento para o diretório que iremos trabalhar "trabalho-grupo/". Para isso, utilize o gerenciador de ambientes de sua preferência. Com o ambiente virtual criado e ativado, instale a ferramenta do querido-diario-toolbox através do gerenciador de pacotes pip (pip install querido-diario-toolbox). 
 
 Finalizado todos os passos até aqui, finalmente será possível trabalhar em nosso notebook e realizar as fiscalizações propostas no trabalho.
 
-## Fiscalização dos diários oficiais
+# Fiscalização dos diários oficiais
 
 Nessa altura, já estamos com todo ambiente de desenvolvimento preparado para explorar e analisar as informações dos diários oficiais. De forma resumido, foi utilizado o jupyter lab como interface para o python, seguindo os seguintes passos:
 
