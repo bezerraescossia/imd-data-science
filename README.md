@@ -7,7 +7,7 @@ Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Uni
 
 # Preparação de Ambiente com querido-diario
 
-O primeiro passo do projeto foi a obtenção dos diários oficiais do município de Natal do dia 01/01/2020 (próximo ao início da pandemia) até a data atual. Mas, antes foi necessário a criação de um ambiente de desenvolvimento. Para isso, basta, primeiramente, clonar o repositório do [projeto querido-diário](https://github.com/okfn-brasil/querido-diario), dirigir-se ao diretório pelo terminal e executar os comandos abaixo:
+O primeiro passo do projeto foi a obtenção dos diários oficiais do município de Natal do dia 01/01/2020 (próximo ao início da pandemia) até a data de escrita desse material (26/11/2021). Mas, antes, foi necessário a criação de um ambiente de desenvolvimento. Para isso, bastou, primeiramente, clonar o repositório do [projeto querido-diário](https://github.com/okfn-brasil/querido-diario), dirigir-se ao diretório pelo terminal e executar os comandos abaixo:
 
 ```
 $ python3 -m venv .venv
@@ -16,15 +16,16 @@ $ pip install -r data_collection/requirements-dev.txt
 $ pre-commit install
 ```
 
-Desse modo, foi criado um ambiente de desenvolvimento através do virtual-env, ativado e instalado todos os requisitos contido no arquivo requirements-dev.txt.
+Desse modo, foi criado um ambiente de desenvolvimento através do virtual-env, ativado e instalado todos os requisitos contidos no arquivo requirements-dev.txt.
 
 Após a criação do ambiente virtual e sua ativação, foi executado a aplicação de webscraping para o município de Natal/RN. Para isso, foi preciso dirigir-se para o diretório data_collection e executar o seguinte comando:
 
 ```
 $ scrapy crawl rn_natal -a start_date=2020-01-01
 ```
+[imagem]
 
-Os PDFs relativos a pesquisa foram coletados e armazenados no diretório data_collection/data. Entretanto, esses PDFs dispõem-se em diversas pastas, com suas respectivas datas. Para facilitar a organização, é desejável que esses PDFs encontrem-se em apenas uma pasta, com nome "pdfs", por exemplo. Para isso, foi executado o seguinte comando no diretório data_collection/data:
+Os PDFs relativos a pesquisa foram coletados e armazenados no diretório data_collection/data. Entretanto, esses PDFs dispõem-se em diversas pastas (ver imagem acima), com suas respectivas datas. Para facilitar a organização, é desejável que esses PDFs encontrem-se em apenas uma pasta, com nome "pdfs", por exemplo. Para isso, foi executado o seguinte comando no diretório data_collection/data:
 
 ```
 find . -name '*.pdf' -exec mv -t ./pdfs {} +
@@ -42,15 +43,15 @@ A pasta "pdf" foi então movida de querido-diario/data_collection/data para trab
 
 # Preparação de Ambiente com querido-diario-toolbox
 
-Nesse momento, é necessário ainda a criação de um ambiente de desenvolvimento para o diretório que iremos trabalhar "trabalho-grupo/". Para isso, utilize o gerenciador de ambientes de sua preferência. Com o ambiente virtual criado e ativado, instale a ferramenta do querido-diario-toolbox através do gerenciador de pacotes pip (pip install querido-diario-toolbox). 
+Nesse momento, é necessário ainda a criação de um ambiente de desenvolvimento para o diretório que iremos trabalhar "trabalho-grupo/". Para isso, utilizou-se o gerenciador de ambientes conda, mas qualquer outro poderia ser utilizado. Com o ambiente virtual criado e ativado, instalou-se a ferramenta do querido-diario-toolbox através do gerenciador de pacotes pip (pip install querido-diario-toolbox). 
 
-Finalizado todos os passos até aqui, finalmente será possível trabalhar em nosso notebook e realizar as fiscalizações propostas no trabalho.
+Finalizado todos os passos até aqui, finalmente foi possível trabalhar em nosso notebook e realizar as fiscalizações propostas no trabalho.
 
 # Fiscalização dos diários oficiais
 
 Nessa altura, já estamos com todo ambiente de desenvolvimento preparado para explorar e analisar as informações dos diários oficiais. De forma resumido, foi utilizado o jupyter lab como interface para o python, seguindo os seguintes passos:
 
-- Importar as bibliotecas devidas e configura-las
+- Importar as bibliotecas devidas e configurá-las
 - Extrair arquivos .txt e .json (metadados) dos pdfs
 - Localizar os documentos que citam os remédios não eficazes
 - Estruturar as informações em um arquivo .csv no formato de log (data, nome do documento, remédio citado, número de páginas do documento)
