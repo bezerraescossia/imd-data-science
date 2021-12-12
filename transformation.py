@@ -1,10 +1,8 @@
 import pandas as pd
 
-df = pd.read_csv('data/raw_log.csv')
-df.head()
-
+df = pd.read_csv('raw_log.csv')
 municipios = pd.read_csv('data/codigo_municipio.csv')
-municipios.head()
+
 
 df = pd.merge(df, municipios, how='left', left_on='cod_ibge_municipio', right_on='codigo')
 
