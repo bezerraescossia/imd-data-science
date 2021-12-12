@@ -22,9 +22,6 @@ Palmas,1721000
 
 
 
-
-
-
 problemas:
 recife
 fortaleza
