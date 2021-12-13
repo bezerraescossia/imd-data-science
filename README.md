@@ -150,3 +150,7 @@ O primeiro passo foi selecionar somente as features necessárias para o aprendiz
 </p>
 
 Por fim, foi adicionada a coluna "label" que recebe a categoria daquela mensagem. Como já explicado, por se tratar de um modelo supervisionado, a "rotulação" quanto a relevância da mensagem foi manualmente inputada, a partir da leitura de cada mensagem e classificação dela, por fim chegamos ao arquivo [![.csv](https://img.shields.io/badge/-csv-blue)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/ml.csv) preparado para o treinamento do modelo.
+
+<p align="center">
+  <img src="img/ml.png" />
+</p>
