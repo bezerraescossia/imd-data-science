@@ -79,7 +79,11 @@ Como visto anteriormente, o resultado obtido até então são arquivos PDFs rela
 $ pip install querido-diario-toolbox
 ```
 
-Com a biblioteca instalada, foi criado um arquivo [![Python](https://img.shields.io/badge/-python-brightgreen)](https://github.com/bezerraescossia/imd-data-science/blob/main/extraction.py) para realizar as tarefas de extração dos arquivos .txt e .json, além de procurar as palavras-chaves relacionadas aos remédios não eficazes e ao final estruturar as informações coletadas em um arquivo .csv. Criado o arquivo .csv, acaba a coleta, transformação e estruturação dos dados e torna possível a análise exploratória dos dados com utilização do pandas.
+Com a biblioteca instalada, foi criado um arquivo [![Python](https://img.shields.io/badge/-python-brightgreen)](https://github.com/bezerraescossia/imd-data-science/blob/main/extraction.py) para realizar as tarefas de transformação dos arquivos .pdf para .txt e .json.
+
+Após a obtenção dos arquivos nessas extensões, foi necessário aplicar um filtro com as palavras-chaves relacionadas aos remédios não eficazes e ao final estruturar as informações coletadas em um arquivo .csv (veja no arquivo [![Python](https://img.shields.io/badge/-python-brightgreen)](https://github.com/bezerraescossia/imd-data-science/blob/main/loading.py)). 
+
+Criado o arquivo .csv, acaba a coleta, transformação e estruturação dos dados e torna possível a análise exploratória dos dados com utilização do pandas (observe o arquivo [![.csv](https://img.shields.io/badge/-csv-blue)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv) gerado)
 
 # Análise Exploratória de Dados
 
@@ -87,5 +91,62 @@ As seguintes perguntas foram realizadas:
 
 - Quantas vezes cada remédio não eficaz foi citado nos diários oficiais?
 - Quantas vezes cada município citou um remédio não eficaz?
+- Quais empresas listadas?
+- Qual cidade gastou a maior quantidade de dinheiro?
 
 Observe todo o código através do [![Jupyter](https://img.shields.io/badge/-Notebook-191A1B?style=flat-square&logo=jupyter)](https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb)
+
+# Preparação dos Dados para Machine Learning
+
+No contexto das informações apresentadas em nosso dataset, não se pode inferir que uma citação a um remédio não eficaz indique necessariamente a sua utilização ao combate do COVID-19, muitas vezes esses remédios são citados em diários oficiais, inclusive, para a crítica de seu uso. A fim de solucionar esse problema, foi proposto a categorização dos textos em duas classes de acordo com sua relevância para o estudo:
+
+0. Irrelevante (não se pode deduzir a utilização dos remédios no enfrentamento da pandemia)
+1. Relevante (pode-se deduzir a utilização dos remédios no enfrentamento da pandemia)
+
+Para a concretização dessa solução, será utilizado algorítmos de *machine learning*. Mas, antes disso, é necessário realizar a preparação de nosso dataset. 
+
+A solução proposta baseia-se na função do scikit-learn *"sklearn.feature_extraction_text.CountVectorizer"*, que converte uma coleção de strings em uma matriz e realiza sua contagem.
+
+```python
+>>> from sklearn.feature_extraction.text import CountVectorizer
+>>> corpus = [
+...     'This is the first document.',
+...     'This document is the second document.',
+...     'And this is the third one.',
+...     'Is this the first document?',
+... ]
+>>> vectorizer = CountVectorizer()
+>>> X = vectorizer.fit_transform(corpus)
+>>> vectorizer.get_feature_names_out()
+array(['and', 'document', 'first', 'is', 'one', 'second', 'the', 'third',
+       'this'], ...)
+>>> print(X.toarray())
+[[0 1 1 1 0 0 1 0 1]
+ [0 2 0 1 0 1 1 0 1]
+ [1 0 0 1 1 0 1 1 1]
+ [0 1 1 1 0 0 1 0 1]]
+```
+
+Observando a matriz gerada, como resultado, fica fácil de compreender essa função. Observe que temos 4 linhas, que indicam as 4 frases da variável *corpus*, cada coluna representa uma palavra que segue a ordem ['and', 'document', 'first', 'is', 'one', 'second', 'the', 'third', 'this']. A primeira linha da matriz indica que a primeira frase da variável *corpus* ('This is the first document.') possui:
+
+- 0 palavras 'and'
+- 1 palavra 'document'
+- 1 palavra 'first'
+- 1 palavra 'is'
+- 0 palavras 'one'
+- 0 palavras 'second'
+- 1 palavra 'the'
+- 0 palavras 'third'
+- 1 palavra 'this'
+
+da mesma forma ocorre para a segunda frase que é a segunda coluna da matriz e assim por diante.
+
+Portanto, para a preparação dos dados na utilização dos algoritmos de *machine learning* não será necessária a criação de features, uma vez que utilizaremos a vetorização das palavras estabelecidas em nosso dataset. Precisamos, entretanto, classificar essas mensagens, uma vez que utilizaremos o aprendizado supervisionado. 
+
+O primeiro passo foi selecionar somente as features necessárias para o aprendizado de maquina, portanto do arquivo [![.csv](https://img.shields.io/badge/-csv-blue)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv) foi selecionado somente a serie "texto". Além disso, como o objetivo é classificar as mensagens como relevante e irrelevante, podemos eliminar muitas mensagens irrelevantes (já que as relevantes são as que interessam) apresentando somente os textos que possuem as palavras "covid", "corona" ou "pandemia" (veja o código no arquivo [![Python](https://img.shields.io/badge/-python-brightgreen)](https://github.com/bezerraescossia/imd-data-science/blob/main/ml_preparation.py))
+
+<p align="center">
+  <img src="img/12.jpg" />
+</p>
+
+Por fim, foi adicionada a coluna "label" que recebe a categoria daquela mensagem. Como já explicado, por se tratar de um modelo supervisionado, a "rotulação" quanto a relevância da mensagem foi manualmente inputada, a partir da leitura de cada mensagem e classificação dela, por fim chegamos ao arquivo [![.csv](https://img.shields.io/badge/-csv-blue)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/ml.csv) preparado para o treinamento do modelo.
