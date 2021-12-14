@@ -90,7 +90,7 @@ Auxiliado pela biblioteca do querido-diario-toolbox, os seguintes passos foram r
 5. Remoção dos textos que não possuem as palavras "COVID", "CORONA" ou "PANDEMIA", removendo assim boa parte de textos que apesar de possuirem a citação aos remédios não explicitam sua relação ao covid;
 6. Criação de coluna com os CNPJs das empresas citadas nos textos, quando houver.
 <br><br>
-<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/transformation.ipynb"><img src="https://badgen.net/badge/icon/Notebook%20com%20Códigos/orange?icon=github&amp;label" alt="Open GitHub"></a> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv"><img src="https://badgen.net/badge/icon/ACSV%20Gerado/purple?icon=github&amp;label" alt="Open GitHub"></a></p>
+<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/transformation.ipynb"><img src="https://badgen.net/badge/icon/Notebook%20com%20Códigos/orange?icon=github&amp;label" alt="Open GitHub"></a> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv"><img src="https://badgen.net/badge/icon/CSV%20Gerado/purple?icon=github&amp;label" alt="Open GitHub"></a></p>
 
 # Análise Exploratória de Dados
 
