@@ -1,10 +1,10 @@
 # Resumo
 - **Disciplina**: IMD1151 - Ciência de Dados
 - **Ano**: 2021.2
-- **Professor**: [![Open GitHub](https://badgen.net/badge/icon/Leonardo%20Bezerra?icon=github&label)](https://github.com/leobezerra?tab=repositories)
+- **Professor**: [Leonardo Bezerra](https://github.com/leobezerra?tab=repositories)
 - **Grupo**: Joseane Palhares de Aquino, Rafael Bezerra da Escóssia Araújo, Thereza Angélica Moura e Silva, Wagner Gama
 
-Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção a remédios não eficazes em diários oficiais de municípios brasileiros. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto [![Open GitHub](https://badgen.net/badge/icon/querido%20diário/red?icon=github&label)](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
+Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção a remédios não eficazes em diários oficiais de municípios brasileiros. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto [Querido Diário](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
 
 # Contextualização
 De acordo com o próprio site, a Open Knowledge Brasil (OKBR), também chamada de Rede pelo Conhecimento Livre, é uma Organização da Sociedade Civil (OSC) sem fins lucrativos e apartidária, regida por estatuto. A principal missão da OKBR é desenvolver ferramentas cívicas, projetos, análises de políticas públicas, jornalismo de dados e promover o conhecimento livre nos diversos campos da sociedade. Na esfera política, a organização busca tornar a relação entre governo e sociedade mais próxima e transparente.
@@ -36,9 +36,9 @@ O primeiro passo do projeto foi a obtenção dos diários oficiais de município
 
 O grande desafio dessa primeira fase é automatizar a coleta dos diários oficiais, já que cada prefeitura tem seu próprio portal. Um caminho seria realizar a raspagem dos dados (webscraping) em cada site municipal, entretanto, isso demandaria muito tempo. Nessa perspectiva, para facilitar esse processo, o projeto querido diário já disponibiliza uma API destinada a raspagem dessas informações. A API não possui, ainda, compatibilidade com todos os municípios, entretanto, a maioria das grandes cidades já fazem parte de seu acervo.
 
-- confira os [![txt](https://badgen.net/badge/icon/municípios/yellow?icon=github&label)](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt) incluidos nesse estudo
+- confira os [municípios](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt) incluidos nesse estudo
 
-Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto [![Open GitHub](https://badgen.net/badge/icon/querido%20diário/red?icon=github&label)](https://github.com/okfn-brasil/querido-diario), e acessando o diretório pelo terminal, executou-se os comandos abaixo:
+Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto [Querido Diário](https://github.com/okfn-brasil/querido-diario), e acessando o diretório pelo terminal, executou-se os comandos abaixo:
 
 ```
 $ python3 -m venv .venv
@@ -90,18 +90,32 @@ Auxiliado pela biblioteca do querido-diario-toolbox, os seguintes passos foram r
 5. Remoção dos textos que não possuem as palavras "COVID", "CORONA" ou "PANDEMIA", removendo assim boa parte de textos que apesar de possuirem a citação aos remédios não explicitam sua relação ao covid;
 6. Criação de coluna com os CNPJs das empresas citadas nos textos, quando houver.
 <br><br>
-<p align='center'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/transformation.ipynb"><img src="https://badgen.net/badge/icon/Notebook%20com%20Códigos/orange?icon=github&amp;label" alt="Open GitHub"></a> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv"><img src="https://badgen.net/badge/icon/Arquivo%20.CSV%20gerado/green?icon=github&amp;label" alt="Open GitHub"></a></p>
+<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/transformation.ipynb"><img src="https://badgen.net/badge/icon/Notebook%20com%20Códigos/orange?icon=github&amp;label" alt="Open GitHub"></a> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv"><img src="https://badgen.net/badge/icon/Arquivo%20.CSV%20gerado/green?icon=github&amp;label" alt="Open GitHub"></a></p>
 
 # Análise Exploratória de Dados
 
-As seguintes perguntas foram realizadas:
+As seguintes questões foram levantadas para a exploração dos dados:
 
-- Quantas vezes cada remédio não eficaz foi citado nos diários oficiais?
-- Quantas vezes cada município citou um remédio não eficaz?
-- Quais empresas listadas?
-- Qual cidade gastou a maior quantidade de dinheiro?
+1. Quantas vezes cada remédio não eficaz foi citado nos diários oficiais?
+   
+<p>
+  <img src='img/remedios.png'>
+</p>
 
-Observe todo o código através do [![Open GitHub](https://badgen.net/badge/icon/notebook/orange?icon=github&label)](https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb).
+2. Quantas vezes cada município citou um remédio não eficaz?
+
+<p>
+  <img src='img/municipios.png'>
+</p>
+
+3. Quais empresas foram mais citadas?
+
+<p>
+  <img src='img/topempresas.png'>
+</p>
+<br>
+<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb"><img src="https://badgen.net/badge/icon/Notebook%20com%20Códigos/orange?icon=github&amp;label" alt="Open GitHub"></a></p>
+
 
 # Preparação dos Dados para Machine Learning
 
@@ -112,7 +126,7 @@ No contexto das informações apresentadas em nosso dataset, não se pode inferi
 
 Para a concretização dessa solução, será utilizado algorítmos de *machine learning*. Mas, antes disso, é necessário realizar a preparação de nosso dataset. 
 
-A solução proposta baseia-se na função do scikit-learn *"sklearn.feature_extraction_text.CountVectorizer"*, que converte uma coleção de strings em uma matriz e realiza sua contagem.
+A solução proposta baseia-se na função do scikit-learn *"sklearn.feature_extraction_text.CountVectorizer"*, que converte uma coleção de strings em uma matriz e realiza sua contagem, processo conhecido como bag of words.
 
 ```python
 >>> from sklearn.feature_extraction.text import CountVectorizer
@@ -148,16 +162,19 @@ Observando a matriz gerada, como resultado, fica fácil de compreender essa fun�
 
 da mesma forma ocorre para a segunda frase que é a segunda coluna da matriz e assim por diante.
 
-Portanto, para a preparação dos dados na utilização dos algoritmos de *machine learning* não será necessária a criação de features, uma vez que utilizaremos a vetorização das palavras estabelecidas em nosso dataset. Precisamos, entretanto, classificar essas mensagens, uma vez que utilizaremos o aprendizado supervisionado. 
+Portanto, para a preparação dos dados na utilização dos algoritmos de *machine learning* não será necessária a criação de features, uma vez que utilizaremos o conceito de bag of words. Precisamos, entretanto, classificar manualmente essas mensagens, para que o modelo possa ser treinado.
 
-O primeiro passo foi selecionar somente as features necessárias para o aprendizado de maquina, portanto do arquivo [![.csv](https://img.shields.io/badge/-csv-blue)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv) foi selecionado somente a serie "texto". Além disso, como o objetivo é classificar as mensagens como relevante e irrelevante, podemos eliminar muitas mensagens irrelevantes (já que as relevantes são as que interessam) apresentando somente os textos que possuem as palavras "covid", "corona" ou "pandemia" (veja o código no arquivo [![Python](https://img.shields.io/badge/-python-brightgreen)](https://github.com/bezerraescossia/imd-data-science/blob/main/ml_preparation.py))
+O primeiro passo foi selecionar somente as features necessárias para o aprendizado de maquina, do nosso [dataset](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv) foi selecionado somente a serie "texto".
 
 <p align="center">
   <img src="img/12.jpg" />
 </p>
 
-Por fim, foi adicionada a coluna "label" que recebe a categoria daquela mensagem. Como já explicado, por se tratar de um modelo supervisionado, a "rotulação" quanto a relevância da mensagem foi manualmente inputada, a partir da leitura de cada mensagem e classificação dela, por fim chegamos ao arquivo [![.csv](https://img.shields.io/badge/-csv-blue)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/ml.csv) preparado para o treinamento do modelo.
+Por fim, foi adicionada a coluna "label" que recebe a categoria daquela mensagem. Como já explicado, por se tratar de um modelo supervisionado, a "rotulação" quanto a relevância da mensagem foi manualmente inputada, a partir da leitura de cada mensagem e classificação dela, por fim chegamos ao arquivo preparado para o treinamento do modelo.
 
 <p align="center">
   <img src="img/ml.png" />
 </p>
+
+<br>
+<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb"><img src="https://badgen.net/badge/icon/Python%20com%20Códigos/green?icon=github&amp;label" alt="Open GitHub"> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb"><img src="https://badgen.net/badge/icon/CSV%20Gerado/purple?icon=github&amp;label" alt="Open GitHub"></a></p>
