@@ -90,7 +90,7 @@ with open ('log.csv', 'a') as csv:
                                 if 'AZITROMICINA' in token:
                                     csv.write(file + ';' + folder + ';' + folder[:2] + ';' + 'Não Informado' + ';' + token + ';' +'azitromicina\n')
 
-## Inserindo os nomes das cidades e estados
+# Inserindo os nomes das cidades e estados
 df = pd.read_csv('log.csv')
 municipios = pd.read_csv('data/codigo_municipio.csv')
 municipios['codigo'] = municipios['codigo'].astype(object)

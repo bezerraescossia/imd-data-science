@@ -1,10 +1,10 @@
 # Resumo
 - **Disciplina**: IMD1151 - Ciência de Dados
 - **Ano**: 2021.2
-- **Professor**: Leonardo Bezerra [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/leobezerra?tab=repositories)
+- **Professor**: [![Open GitHub](https://badgen.net/badge/icon/Leonardo%20Bezerra?icon=github&label)](https://github.com/leobezerra?tab=repositories)
 - **Grupo**: Joseane Palhares de Aquino, Rafael Bezerra da Escóssia Araújo, Thereza Angélica Moura e Silva, Wagner Gama
 
-Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção a remédios não eficazes em diários oficiais de municípios brasileiros. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto querido diário [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
+Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção a remédios não eficazes em diários oficiais de municípios brasileiros. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto [![Open GitHub](https://badgen.net/badge/icon/querido%20diário/red?icon=github&label)](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
 
 # Contextualização
 De acordo com o próprio site, a Open Knowledge Brasil (OKBR), também chamada de Rede pelo Conhecimento Livre, é uma Organização da Sociedade Civil (OSC) sem fins lucrativos e apartidária, regida por estatuto. A principal missão da OKBR é desenvolver ferramentas cívicas, projetos, análises de políticas públicas, jornalismo de dados e promover o conhecimento livre nos diversos campos da sociedade. Na esfera política, a organização busca tornar a relação entre governo e sociedade mais próxima e transparente.
@@ -34,9 +34,11 @@ Neste trabalho, as ferramentas do projeto Querido Diário serão utilizadas para
 
 O primeiro passo do projeto foi a obtenção dos diários oficiais de municípios brasileiros, foram selecionadas para esse estudo todas as capitais brasileiras, além de outras grandes cidades do país.
 
-O grande desafio dessa primeira fase é automatizar a coleta dos diários oficiais, já que cada prefeitura tem seu próprio portal. Um caminho seria realizar a raspagem dos dados (webscraping) em cada site municipal, entretanto, isso demandaria muito tempo. Nessa perspectiva, para facilitar esse processo, o projeto querido diário já disponibiliza uma API destinada a raspagem dessas informações. A API não possui, ainda, compatibilidade com todos os municípios, entretanto, a maioria das grandes cidades já fazem parte de seu acervo ([confira os municípios incluidos nesse estudo](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt)).
+O grande desafio dessa primeira fase é automatizar a coleta dos diários oficiais, já que cada prefeitura tem seu próprio portal. Um caminho seria realizar a raspagem dos dados (webscraping) em cada site municipal, entretanto, isso demandaria muito tempo. Nessa perspectiva, para facilitar esse processo, o projeto querido diário já disponibiliza uma API destinada a raspagem dessas informações. A API não possui, ainda, compatibilidade com todos os municípios, entretanto, a maioria das grandes cidades já fazem parte de seu acervo.
 
-Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto querido-diário [![Open GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/okfn-brasil/querido-diario), e acessando o diretório pelo terminal, executou-se os comandos abaixo:
+- confira os [![txt](https://badgen.net/badge/icon/municípios/yellow?icon=github&label)](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt) incluidos nesse estudo
+
+Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto [![Open GitHub](https://badgen.net/badge/icon/querido%20diário/red?icon=github&label)](https://github.com/okfn-brasil/querido-diario), e acessando o diretório pelo terminal, executou-se os comandos abaixo:
 
 ```
 $ python3 -m venv .venv
@@ -79,11 +81,16 @@ Como visto anteriormente, o resultado obtido até então são arquivos PDFs rela
 $ pip install querido-diario-toolbox
 ```
 
-Com a biblioteca instalada, foi criado um arquivo [![Python](https://img.shields.io/badge/-python-brightgreen)](https://github.com/bezerraescossia/imd-data-science/blob/main/extraction.py) para realizar as tarefas de transformação dos arquivos .pdf para .txt e .json.
+Auxiliado pela biblioteca do querido-diario-toolbox, os seguintes passos foram realizados:
 
-Após a obtenção dos arquivos nessas extensões, foi necessário aplicar um filtro com as palavras-chaves relacionadas aos remédios não eficazes e ao final estruturar as informações coletadas em um arquivo .csv (veja no arquivo [![Python](https://img.shields.io/badge/-python-brightgreen)](https://github.com/bezerraescossia/imd-data-science/blob/main/loading.py)). 
-
-Criado o arquivo .csv, acaba a coleta, transformação e estruturação dos dados e torna possível a análise exploratória dos dados com utilização do pandas (observe o arquivo [![.csv](https://img.shields.io/badge/-csv-blue)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv) gerado)
+1. Transformação dos arquivos .pdf para .txt e .json;
+2. Seleção dos diários oficiais que possuem a citação de remédios comprovadamente não eficazes no combate ao COVID (cloroquina, ivermectina, hidroxicloroquina e azitromicina);
+3. Estruturação dos textos relevantes contidos nos arquivos .txt e .json em um arquivo .csv para futura utilização como DataFrame;
+4. Substituição da coluna com os códigos dos municípios e estados do IBGE por seus respectivos nomes;
+5. Remoção dos textos que não possuem as palavras "COVID", "CORONA" ou "PANDEMIA", removendo assim boa parte de textos que apesar de possuirem a citação aos remédios não explicitam sua relação ao covid;
+6. Criação de coluna com os CNPJs das empresas citadas nos textos, quando houver.
+<br><br>
+<p align='center'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/transformation.ipynb"><img src="https://badgen.net/badge/icon/Notebook%20com%20Códigos/orange?icon=github&amp;label" alt="Open GitHub"></a> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv"><img src="https://badgen.net/badge/icon/Arquivo%20.CSV%20gerado/green?icon=github&amp;label" alt="Open GitHub"></a></p>
 
 # Análise Exploratória de Dados
 
@@ -94,7 +101,7 @@ As seguintes perguntas foram realizadas:
 - Quais empresas listadas?
 - Qual cidade gastou a maior quantidade de dinheiro?
 
-Observe todo o código através do [![Jupyter](https://img.shields.io/badge/-Notebook-191A1B?style=flat-square&logo=jupyter)](https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb)
+Observe todo o código através do [![Open GitHub](https://badgen.net/badge/icon/notebook/orange?icon=github&label)](https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb).
 
 # Preparação dos Dados para Machine Learning
 
