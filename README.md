@@ -177,4 +177,4 @@ Por fim, foi adicionada a coluna "label" que recebe a categoria daquela mensagem
 </p>
 
 <br>
-<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb"><img src="https://badgen.net/badge/icon/Python%20com%20Códigos/green?icon=github&amp;label" alt="Open GitHub"> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb"><img src="https://badgen.net/badge/icon/CSV%20Gerado/purple?icon=github&amp;label" alt="Open GitHub"></a></p>
+<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/ml_preparation.py"><img src="https://badgen.net/badge/icon/Python%20com%20Códigos/green?icon=github&amp;label" alt="Open GitHub"> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/ml.csv"><img src="https://badgen.net/badge/icon/CSV%20Gerado/purple?icon=github&amp;label" alt="Open GitHub"></a></p>
