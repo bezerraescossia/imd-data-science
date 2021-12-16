@@ -41,7 +41,7 @@ O primeiro passo do projeto foi a obtenção dos diários oficiais de município
 
 O grande desafio dessa primeira fase é automatizar a coleta dos diários oficiais, já que cada prefeitura tem seu próprio portal. Um caminho seria realizar a raspagem dos dados (webscraping) em cada site municipal, entretanto, isso demandaria muito tempo. Nessa perspectiva, para facilitar esse processo, o projeto querido diário já disponibiliza uma API destinada a raspagem dessas informações. A API não possui, ainda, compatibilidade com todos os municípios, entretanto, a maioria das grandes cidades já fazem parte de seu acervo.
 
-- confira os municípios [![Outros](https://img.shields.io/badge/--EC1C24?style=social&logo=giphy)](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt) incluidos nesse estudo.
+- confira os municípios incluidos nesse estudo [![Outros](https://img.shields.io/badge/--EC1C24?style=social&logo=giphy)](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt)
 
 Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/okfn-brasil/querido-diario) , e acessando o diretório pelo terminal, executou-se os comandos abaixo:
 
