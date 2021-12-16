@@ -1,15 +1,15 @@
 # Resumo
 - **Disciplina**: IMD1151 - Ciência de Dados
 - **Ano**: 2021.2
-- **Professor**: Leonardo Bezerra [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/leobezerra?tab=repositories){:target="_blank"}
+- **Professor**: Leonardo Bezerra [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/leobezerra?tab=repositories)
 - **Grupo**: 
-   - Joseane Palhares de Aquino [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/joseanepalhares){:target="_blank"}[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/joseanepalhares/){:target="_blank"}
-   - Rafael Bezerra da Escóssia Araújo [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/bezerraescossia){:target="_blank"}[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/bezerraescossia/){:target="_blank"}
+   - Joseane Palhares de Aquino [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/joseanepalhares)[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/joseanepalhares/)
+   - Rafael Bezerra da Escóssia Araújo [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/bezerraescossia)[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/bezerraescossia/)
    - Thereza Angélica Moura e Silva
-   - Wagner Gama [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/wagnergama){:target="_blank"}[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/wagnergamarn/){:target="_blank"}
-- **Orientador**: Ítalo Epifânio [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/itepifanio){:target="_blank"}[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/italoepifanio/){:target="_blank"}
+   - Wagner Gama [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/wagnergama)[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/wagnergamarn/)
+- **Orientador**: Ítalo Epifânio [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/itepifanio)[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/italoepifanio/)
 
-Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção a remédios não eficazes em diários oficiais de municípios brasileiros. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto [![Github](https://img.shields.io/badge/-Querido_Diário-EC1C24?style=social&logo=Github)](https://github.com/okfn-brasil/querido-diario){:target="_blank"} da Open knowledge Brasil.
+Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção a remédios não eficazes em diários oficiais de municípios brasileiros. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto querido diário [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
 
 # Contextualização
 De acordo com o próprio site, a Open Knowledge Brasil (OKBR), também chamada de Rede pelo Conhecimento Livre, é uma Organização da Sociedade Civil (OSC) sem fins lucrativos e apartidária, regida por estatuto. A principal missão da OKBR é desenvolver ferramentas cívicas, projetos, análises de políticas públicas, jornalismo de dados e promover o conhecimento livre nos diversos campos da sociedade. Na esfera política, a organização busca tornar a relação entre governo e sociedade mais próxima e transparente.
@@ -41,9 +41,9 @@ O primeiro passo do projeto foi a obtenção dos diários oficiais de município
 
 O grande desafio dessa primeira fase é automatizar a coleta dos diários oficiais, já que cada prefeitura tem seu próprio portal. Um caminho seria realizar a raspagem dos dados (webscraping) em cada site municipal, entretanto, isso demandaria muito tempo. Nessa perspectiva, para facilitar esse processo, o projeto querido diário já disponibiliza uma API destinada a raspagem dessas informações. A API não possui, ainda, compatibilidade com todos os municípios, entretanto, a maioria das grandes cidades já fazem parte de seu acervo.
 
-- confira os municípios [![Outros](https://img.shields.io/badge/--EC1C24?style=social&logo=giphy)](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt){:target="_blank"} incluidos nesse estudo.
+- confira os municípios [![Outros](https://img.shields.io/badge/--EC1C24?style=social&logo=giphy)](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt) incluidos nesse estudo.
 
-Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/okfn-brasil/querido-diario){:target="_blank"}, e acessando o diretório pelo terminal, executou-se os comandos abaixo:
+Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/okfn-brasil/querido-diario) , e acessando o diretório pelo terminal, executou-se os comandos abaixo:
 
 ```
 $ python3 -m venv .venv
@@ -169,7 +169,7 @@ da mesma forma ocorre para a segunda frase que é a segunda coluna da matriz e a
 
 Portanto, para a preparação dos dados na utilização dos algoritmos de *machine learning* não será necessária a criação de features, uma vez que utilizaremos o conceito de bag of words. Precisamos, entretanto, classificar manualmente essas mensagens, para que o modelo possa ser treinado.
 
-O primeiro passo foi selecionar somente as features necessárias para o aprendizado de maquina, do nosso dataset [![Outros](https://img.shields.io/badge/--EC1C24?style=social&logo=giphy)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv){:target="_blank"} foi selecionado somente a serie "texto".
+O primeiro passo foi selecionar somente as features necessárias para o aprendizado de maquina, do nosso dataset [![Outros](https://img.shields.io/badge/--EC1C24?style=social&logo=giphy)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv) foi selecionado somente a serie "texto".
 
 <p align="center">
   <img src="img/12.jpg" />
