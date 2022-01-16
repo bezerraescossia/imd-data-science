@@ -1,10 +1,15 @@
 # Resumo
 - **Disciplina**: IMD1151 - Ciência de Dados
 - **Ano**: 2021.2
-- **Professor**: [Leonardo Bezerra](https://github.com/leobezerra?tab=repositories)
-- **Grupo**: Joseane Palhares de Aquino, Rafael Bezerra da Escóssia Araújo, Thereza Angélica Moura e Silva, Wagner Gama
+- **Professor**: Leonardo Bezerra [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/leobezerra?tab=repositories)
+- **Grupo**: 
+   - Joseane Palhares de Aquino [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/joseanepalhares)[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/joseanepalhares/)
+   - Rafael Bezerra da Escóssia Araújo [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/bezerraescossia)[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/bezerraescossia/)
+   - Thereza Angélica Moura e Silva
+   - Wagner Gama [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/wagnergama)[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/wagnergamarn/)
+- **Orientador**: Ítalo Epifânio [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/itepifanio)[![LinkedIn](https://img.shields.io/badge/--EC1C24?style=social&logo=Linkedin)](https://www.linkedin.com/in/italoepifanio/)
 
-Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção a remédios não eficazes em diários oficiais de municípios brasileiros. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto [Querido Diário](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
+Esse repositório é destinado ao projeto da disciplina Ciência de Dados da Universidade Federal do Rio Grande do Norte. Nesse projeto, será fiscalizado a menção a remédios não eficazes em diários oficiais de municípios brasileiros. Para essa finalidade, será utilizado as ferramentas dispostas pelo projeto querido diário [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/okfn-brasil/querido-diario) da Open knowledge Brasil.
 
 # Contextualização
 De acordo com o próprio site, a Open Knowledge Brasil (OKBR), também chamada de Rede pelo Conhecimento Livre, é uma Organização da Sociedade Civil (OSC) sem fins lucrativos e apartidária, regida por estatuto. A principal missão da OKBR é desenvolver ferramentas cívicas, projetos, análises de políticas públicas, jornalismo de dados e promover o conhecimento livre nos diversos campos da sociedade. Na esfera política, a organização busca tornar a relação entre governo e sociedade mais próxima e transparente.
@@ -36,9 +41,9 @@ O primeiro passo do projeto foi a obtenção dos diários oficiais de município
 
 O grande desafio dessa primeira fase é automatizar a coleta dos diários oficiais, já que cada prefeitura tem seu próprio portal. Um caminho seria realizar a raspagem dos dados (webscraping) em cada site municipal, entretanto, isso demandaria muito tempo. Nessa perspectiva, para facilitar esse processo, o projeto querido diário já disponibiliza uma API destinada a raspagem dessas informações. A API não possui, ainda, compatibilidade com todos os municípios, entretanto, a maioria das grandes cidades já fazem parte de seu acervo.
 
-- confira os [municípios](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt) incluidos nesse estudo
+- confira os municípios incluidos nesse estudo [![Outros](https://img.shields.io/badge/--EC1C24?style=social&logo=giphy)](https://github.com/bezerraescossia/imd-data-science/blob/main/municipios.txt)
 
-Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto [Querido Diário](https://github.com/okfn-brasil/querido-diario), e acessando o diretório pelo terminal, executou-se os comandos abaixo:
+Para a utilização da API do querido diário foi necessário, primeiramente, a criação de um ambiente de desenvolvimento. Para isso, clonou-se o repositório do projeto [![Github](https://img.shields.io/badge/--EC1C24?style=social&logo=Github)](https://github.com/okfn-brasil/querido-diario) , e acessando o diretório pelo terminal, executou-se os comandos abaixo:
 
 ```
 $ python3 -m venv .venv
@@ -90,7 +95,7 @@ Auxiliado pela biblioteca do querido-diario-toolbox, os seguintes passos foram r
 5. Remoção dos textos que não possuem as palavras "COVID", "CORONA" ou "PANDEMIA", removendo assim boa parte de textos que apesar de possuirem a citação aos remédios não explicitam sua relação ao covid;
 6. Criação de coluna com os CNPJs das empresas citadas nos textos, quando houver.
 <br><br>
-<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/transformation.ipynb"><img src="https://badgen.net/badge/icon/Notebook%20com%20Códigos/orange?icon=github&amp;label" alt="Open GitHub"></a> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv"><img src="https://badgen.net/badge/icon/CSV%20Gerado/purple?icon=github&amp;label" alt="Open GitHub"></a></p>
+<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/transformation.ipynb"><img src="https://img.shields.io/badge/-Notebook_com_Códigos-808080?style=for-the-badge&logo=Jupyter" alt="Open GitHub"></a> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv"><img src="https://img.shields.io/badge/-CSV_Gerado-bfff00?style=for-the-badge&logo=giphy" alt="Open GitHub"></a></p>
 
 # Análise Exploratória de Dados
 
@@ -114,7 +119,7 @@ As seguintes questões foram levantadas para a exploração dos dados:
   <img src='img/topempresas.png'>
 </p>
 <br>
-<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb"><img src="https://badgen.net/badge/icon/Notebook%20com%20Códigos/orange?icon=github&amp;label" alt="Open GitHub"></a></p>
+<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/eda.ipynb"><img src="https://img.shields.io/badge/-Notebook_com_Códigos-808080?style=for-the-badge&logo=Jupyter" alt="Open GitHub"></a></p>
 
 
 # Preparação dos Dados para Machine Learning
@@ -164,7 +169,7 @@ da mesma forma ocorre para a segunda frase que é a segunda coluna da matriz e a
 
 Portanto, para a preparação dos dados na utilização dos algoritmos de *machine learning* não será necessária a criação de features, uma vez que utilizaremos o conceito de bag of words. Precisamos, entretanto, classificar manualmente essas mensagens, para que o modelo possa ser treinado.
 
-O primeiro passo foi selecionar somente as features necessárias para o aprendizado de maquina, do nosso [dataset](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv) foi selecionado somente a serie "texto".
+O primeiro passo foi selecionar somente as features necessárias para o aprendizado de maquina, do nosso dataset [![Outros](https://img.shields.io/badge/--EC1C24?style=social&logo=giphy)](https://github.com/bezerraescossia/imd-data-science/blob/main/data/log.csv) foi selecionado somente a serie "texto".
 
 <p align="center">
   <img src="img/12.jpg" />
@@ -177,4 +182,4 @@ Por fim, foi adicionada a coluna "label" que recebe a categoria daquela mensagem
 </p>
 
 <br>
-<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/ml_preparation.py"><img src="https://badgen.net/badge/icon/Python%20com%20Códigos/green?icon=github&amp;label" alt="Open GitHub"> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/ml.csv"><img src="https://badgen.net/badge/icon/CSV%20Gerado/purple?icon=github&amp;label" alt="Open GitHub"></a></p>
+<p align='right'><a href="https://github.com/bezerraescossia/imd-data-science/blob/main/ml_preparation.py"><img src="https://img.shields.io/badge/-Python_com_Códigos-ffffff?style=for-the-badge&logo=python" alt="Open GitHub"> <a href="https://github.com/bezerraescossia/imd-data-science/blob/main/data/ml.csv"><img src="https://img.shields.io/badge/-CSV_GERADO-bfff00?style=for-the-badge&logo=giphy" alt="Open GitHub"></a></p>
